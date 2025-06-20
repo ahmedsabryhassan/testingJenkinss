@@ -2,7 +2,6 @@ package actions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -11,8 +10,6 @@ public class WebDriverActions {
 
     public static void initializeWebDriver()
     {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new", "--no-sandbox", "--disable-gpu");
         WebDriverManager.chromedriver().setup(); // this downloads the correct driver
         driver = new ChromeDriver();
     }
